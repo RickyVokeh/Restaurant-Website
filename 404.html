@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path
+        const path = window.location.pathname;
+
+        // Remove leading slash
+        const cleanPath = path.replace(/^\//, '');
+
+        // Check if the path has no extension and isn't a directory
+        if (cleanPath && !cleanPath.includes('.') && !cleanPath.endsWith('/')) {
+            // Try to fetch the HTML file
+            fetch(cleanPath + '.html')
+                .then(response => {
+                    if (response.ok) {
+                        window.location.replace(cleanPath + '.html');
+                    } else {
+                        window.location.replace('/404.html');
+                    }
+                })
+                .catch(() => {
+                    window.location.replace('/404.html');
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting...</p>
+</body>
+
+</html>
