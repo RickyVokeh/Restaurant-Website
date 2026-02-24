@@ -114,9 +114,9 @@ h3 {
 }
 
 .btn-outline {
-    background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    background: rgb(245, 152, 14);
+    border: 2px solid rgb(245, 152, 14);
+    color: white;
 }
 
 .btn-outline:hover {
