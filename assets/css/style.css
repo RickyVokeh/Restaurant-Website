@@ -129,7 +129,7 @@ h3 {
 }
 
 .btn:hover {
-    background: transparent;
+    background: rgb(245, 152, 14);
     color: var(--primary);
 }
 
