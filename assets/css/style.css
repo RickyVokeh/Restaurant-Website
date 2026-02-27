@@ -199,7 +199,7 @@ header {
 }
 
 .logo-text span {
-    color: var(--primary);
+    color: var(--dark);
 }
 
 .nav-menu {
