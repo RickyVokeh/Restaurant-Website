@@ -210,6 +210,34 @@
             background: var(--primary);
         }
 
+        .gallery-category-header {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .gallery-category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .gallery-category-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            /* divider length */
+            height: 3px;
+            /* divider thickness */
+            background: #c59d5f;
+            /* divider color */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
         .gallery-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -370,12 +398,15 @@
             <!-- Gallery Grid -->
             <div class="gallery-grid" id="galleryGrid">
                 <!-- Dishes Category -->
+                <div class="gallery-category-header">
+                    <h2 class="gallery-category-title">Signature Dishes</h2>
+                </div>
                 <div class="gallery-item" data-category="dishes">
-                    <img src="assets/img/dishes/t-bone steak.jpg" alt="T-Bone steak with rosemary at Meatlovers Nairobi"
-                        loading="lazy">
+                    <img src="assets/img/dishes/tuna-paste-salad.jpg"
+                        alt="Tuna paste salad with rosemary at Meatlovers Nairobi" loading="lazy">
                     <div class="gallery-overlay">
-                        <h3>T-Bone Steak</h3>
-                        <p>Our signature steak with herb butter</p>
+                        <h3>Tuna paste salad</h3>
+                        <p>Our signature salad with herb butter</p>
                     </div>
                 </div>
 
@@ -425,6 +456,9 @@
                 </div>
 
                 <!-- Interior Category -->
+                <div class="gallery-category-header">
+                    <h2 class="gallery-category-title">Restaurant Interior</h2>
+                </div>
                 <div class="gallery-item" data-category="interior">
                     <img src="assets/img/gallery/event1.jpeg" alt="Cozy interior of Meatlovers Restaurant Nairobi"
                         loading="lazy">
@@ -477,6 +511,9 @@
                 </div>
 
                 <!-- Events Category -->
+                <div class="gallery-category-header">
+                    <h2 class="gallery-category-title">Latest Events</h2>
+                </div>
                 <div class="gallery-item" data-category="events">
                     <img src="assets/img/gallery/event1.jpeg" alt="Birthday celebration at Meatlovers Nairobi"
                         loading="lazy">
